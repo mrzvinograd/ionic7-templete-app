@@ -1,0 +1,22 @@
+<div class="kanban">
+  <div class="column">
+    <h2>To Do</h2>
+    <div *ngFor="let task of tasks.filter(t => t.status === 'todo')">
+      <app-task [task]="task" (move)="moveTask(task, 'in-progress')"></app-task>
+    </div>
+  </div>
+
+  <div class="column">
+    <h2>In Progress</h2>
+    <div *ngFor="let task of tasks.filter(t => t.status === 'in-progress')">
+      <app-task [task]="task" (move)="moveTask(task, 'done')"></app-task>
+    </div>
+  </div>
+
+  <div class="column">
+    <h2>Done</h2>
+    <div *ngFor="let task of tasks.filter(t => t.status === 'done')">
+      <app-task [task]="task" (move)="moveTask(task, 'todo')"></app-task>
+    </div>
+  </div>
+</div>

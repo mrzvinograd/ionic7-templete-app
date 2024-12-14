@@ -1,0 +1,25 @@
+/* src/app/kanban/kanban.component.css */
+.kanban {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .column {
+    width: 30%;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .task {
+    background-color: white;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    transition: box-shadow 0.2s;
+  }
+  
+  .task:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
